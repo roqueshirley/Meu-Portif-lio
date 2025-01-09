@@ -187,4 +187,7 @@ body{
         justify-content: center;
     }
 
+    .foto_sombra_interna {
+        display: none;
+    }
 }
