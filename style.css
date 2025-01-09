@@ -6,10 +6,10 @@
     --tamanho-da-fonte: 24px;
     --font-family:"Montserrat", "sans-serif";
     --color-background: #153448; 
-    --color-destaque:#DFD0B8;
+    --color-destaque:#15dbc7;
     --color-hover:#3C5B6F; 
     --color-text:#948979; 
-    --color-gradiente: #D3F1DF, #85A98F, #5A6C57; 
+    --color-gradiente: #D3F1DF, #1ea1b3, #396d68; 
 
 }
 
@@ -86,7 +86,7 @@ body{
     text-align: center;
     color: var(--color-text);
     border-radius: 8px;
-    font-size: 24px;
+    font-size: var(--tamanho-da-fonte);
     font-weight: 600;
     padding: 16px;
     text-decoration: none;
@@ -110,17 +110,31 @@ body{
     border-radius: 10px;
 }
 
-.conteiner-foto img{
-    width: 100%;
-    border-radius: 50%;   
+.conteiner-foto {
+    width: 450px; /* Ajuste para o tamanho desejado */
+    height: 450px;
+    position: relative;
 }
 
-.foto_sombra_interna{
+.foto_sombra_interna {
+    width: 80%;
+    height: 80%;
     background: linear-gradient(to right, var(--color-gradiente) );
     background-size: 180% 180%;
     animation: gradient-animation 5s ease infinite;
     border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden; /* Esconde partes da imagem que saem do contêiner */
 }
+
+.foto_sombra_interna img {
+    width: 170%; /* Ajuste o valor para "aumentar" a imagem */
+    height: auto;
+    object-fit: cover; /* Mantém a proporção da imagem */
+}
+
 
 
 .rodapé{
